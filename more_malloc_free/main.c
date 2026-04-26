@@ -1,14 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
  * @size: the size of the memory to print
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+void simple_print_buffer(int *buffer, unsigned int size)
 {
 	unsigned int i;
 
@@ -30,21 +29,17 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-	char *a;
+	int *a;
 
-	a = _calloc(98, sizeof(char));
+	a = array_range(0, 10);
 
 	if (a == NULL)
 	{
-		printf("Allocation failed\n");
+		printf("Failed\n");
 		return (1);
 	}
 
-	strcpy(a, "Best");
-	strcpy(a + 4, " School! :)\n");
-	a[97] = '!';
-
-	simple_print_buffer(a, 98);
+	simple_print_buffer(a, 11);
 
 	free(a);
 
