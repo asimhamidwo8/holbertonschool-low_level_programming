@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * print_grid - prints a grid of integers
+ * @grid: the address of the two dimensional grid
+ * @width: width of the grid
+ * @height: height of the grid
+ */
 void print_grid(int **grid, int width, int height)
 {
 	int w, h;
@@ -14,6 +20,11 @@ void print_grid(int **grid, int width, int height)
 	}
 }
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	int **grid;
@@ -30,6 +41,8 @@ int main(void)
 	grid[3][4] = 402;
 
 	print_grid(grid, 6, 4);
+
+	free_grid(grid, 4);
 
 	return (0);
 }
