@@ -1,6 +1,27 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ */
+void simple_print_buffer(char *buffer, unsigned int size)
+{
+	unsigned int i;
+
+	for (i = 0; i < size; i++)
+	{
+		if (i % 10)
+			printf(" ");
+		if (!(i % 10) && i)
+			printf("\n");
+		printf("0x%02x", buffer[i]);
+	}
+	printf("\n");
+}
 
 /**
  * main - check the code
@@ -9,19 +30,23 @@
  */
 int main(void)
 {
-	char *concat;
+	char *a;
 
-	concat = string_nconcat("Best ", "School !!!", 6);
+	a = _calloc(98, sizeof(char));
 
-	if (concat == NULL)
+	if (a == NULL)
 	{
-		printf("Failed\n");
+		printf("Allocation failed\n");
 		return (1);
 	}
 
-	printf("%s\n", concat);
+	strcpy(a, "Best");
+	strcpy(a + 4, " School! :)\n");
+	a[97] = '!';
 
-	free(concat);
+	simple_print_buffer(a, 98);
+
+	free(a);
 
 	return (0);
 }
