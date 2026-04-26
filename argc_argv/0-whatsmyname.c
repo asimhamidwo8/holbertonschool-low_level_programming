@@ -1,5 +1,5 @@
 #include "main.h"
-#include <unistd.h>
+#include <stdio.h>
 
 /**
  * main - prints program name
@@ -11,15 +11,7 @@ int main(int argc, char *argv[])
 {
 	(void)argc;
 
-	write(1, argv[0], 0);
-
-	while (argv[0][0])
-	{
-		write(1, argv[0], 1);
-		break;
-	}
-
-	write(1, "\n", 1);
+	printf("%s\n", argv[0]);
 
 	return (0);
 }
