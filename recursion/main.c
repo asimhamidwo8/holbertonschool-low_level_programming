@@ -6,8 +6,7 @@
  */
 int main(void)
 {
-    _puts_recursion("Puts with recursion");
-    _puts_recursion("Hello");
-    _puts_recursion("");
-    return (0);
+	_print_rev_recursion("Colton Walker");
+	_putchar('\n');
+	return (0);
 }
