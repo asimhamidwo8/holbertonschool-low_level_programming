@@ -1,0 +1,1 @@
+# variadic_functions This project focuses on handling functions with a variable number of arguments in C using stdarg.h to accept and process indefinite parameters in one line.
