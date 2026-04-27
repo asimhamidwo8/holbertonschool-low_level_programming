@@ -1,13 +1,14 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
 
-#include <stdio.h>
+#include <stddef.h>
 
 /**
- * print_name - prints a name using function pointer
- * @name: name to print
- * @f: function pointer
+ * array_iterator - executes a function on each element of an array
+ * @array: pointer to array of integers
+ * @size: number of elements in the array
+ * @action: function pointer to execute on each element
  */
-void print_name(char *name, void (*f)(char *));
+void array_iterator(int *array, size_t size, void (*action)(int));
 
 #endif
