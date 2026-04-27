@@ -4,11 +4,12 @@
 #include <stddef.h>
 
 /**
- * array_iterator - executes a function on each element of an array
- * @array: pointer to array of integers
- * @size: number of elements in the array
- * @action: function pointer to execute on each element
+ * int_index - searches for an integer in array
+ * @array: pointer to array
+ * @size: number of elements
+ * @cmp: function pointer to compare values
+ * Return: index of first match or -1
  */
-void array_iterator(int *array, size_t size, void (*action)(int));
+int int_index(int *array, int size, int (*cmp)(int));
 
 #endif
