@@ -14,7 +14,7 @@ struct dog
 	char *owner;
 };
 
-/* prototypes */
-void print_dog(struct dog *d);
+/* new type name for struct dog */
+typedef struct dog dog_t;
 
 #endif
