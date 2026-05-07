@@ -4,11 +4,10 @@
 #include <stddef.h>
 
 /**
- * struct dlistint_s - doubly linked list
+ * struct dlistint_s - doubly linked list structure
  * @n: integer
  * @prev: points to the previous node
  * @next: points to the next node
- * Description: doubly linked list node structure
  */
 typedef struct dlistint_s
 {
@@ -20,5 +19,6 @@ typedef struct dlistint_s
 size_t print_dlistint(const dlistint_t *h);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 void free_dlistint(dlistint_t *head);
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
 #endif
