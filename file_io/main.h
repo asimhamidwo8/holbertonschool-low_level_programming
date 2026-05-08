@@ -6,6 +6,4 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void _exit(int status);
-
 #endif
