@@ -4,7 +4,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int append_text_to_file(const char *filename, char *text_content);
+void _exit(int status);
 
 #endif
